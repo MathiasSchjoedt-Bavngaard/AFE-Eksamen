@@ -1,0 +1,20 @@
+<div [ngClass]="'content-wrapper'">
+
+  <h2>Counter</h2>
+  <p>Current count: {{ count }}</p>
+  
+  <div [ngClass]="'button-container'">
+    <button [ngClass]="'googly-button'" (click)="increment()">Increment</button>
+    <button [ngClass]="'googly-button'" (click)="decrement()">Decrement</button>
+    <button [ngClass]="'googly-button'" (click)="reset()">Reset Counter</button>
+  </div>
+
+  <button [ngClass]="'googly-button'" (click)="toggleNumberList()">Generate number list</button>
+
+  <div *ngIf="showNumberList">
+    <ul>
+      <li *ngFor="let number of numberArray">{{ number }}</li>
+    </ul>
+  </div>   
+</div>
+
