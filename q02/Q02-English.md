@@ -105,10 +105,10 @@ When making http request to a server it is common to add headers to the request.
 
 You can also add other stuff to the request such as meta data or other headers.
 
-See more in line  in []()
+See more in line 14 in [Interceptor](./src/app/request-logger.interceptor.ts)
 
 ### Error handling
 
 Sine not all HttpRequests are succeful you might want to handle errors. This can be done by using the `catchError()` operator. It is used to catch errors and handle them. It is used in combination with the `throwError()` operator to throw an error.
 
-See more in line  in []()
+See more in line 45 in [Error handling](./src/app/card.service.ts)
