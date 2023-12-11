@@ -15,6 +15,13 @@
     <ul>
       <li *ngFor="let number of numberArray">{{ number }}</li>
     </ul>
-  </div>   
+  </div>
+  
+  <button [ngClass]="'googly-button'" (click)="logCount(count)">Log current count</button>
+  
+  <ul>
+    <li *ngFor="let message of getLogs()">Time: {{ message.date | date:'hh:mm:ss' }} | Count: <strong>{{message.message}}</strong></li>
+  </ul>
+
 </div>
 
