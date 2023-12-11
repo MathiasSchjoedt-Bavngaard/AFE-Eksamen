@@ -1,10 +1,10 @@
 <div [ngClass]="'component-wrapper'">
   <button (click)="getMtgCards()">Get Cards</button>
-  
-  <div *ngIf="mtgCards$ | async as mtgCards">
+
+  <div *ngIf="mtgCards$ | async as mtgCards" [ngClass]="'content-row'">
     <div *ngFor="let card of mtgCards">
-      <div *ngIf="card.imageUrl">
-        <p>{{ card.name }}</p>  
+      <div *ngIf="card.imageUrl" [ngClass]="'component-wrapper'">
+        <p>{{ card.name }}</p>
         <img [src]="card.imageUrl" [alt]="card.name" />
       </div>
     </div>
