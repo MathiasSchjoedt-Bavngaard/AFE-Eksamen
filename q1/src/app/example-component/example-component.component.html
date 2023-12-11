@@ -1,4 +1,4 @@
-<div [ngClass]="'content-wrapper'">
+<div [ngClass]="'component-wrapper'">
 
   <h2>Counter</h2>
   <p>Current count: {{ count }}</p>
@@ -23,5 +23,6 @@
     <li *ngFor="let message of getLogs()">Time: {{ message.date | date:'hh:mm:ss' }} | Count: <strong>{{message.message}}</strong></li>
   </ul>
 
+  <app-display-count [count]="count"></app-display-count>
 </div>
 

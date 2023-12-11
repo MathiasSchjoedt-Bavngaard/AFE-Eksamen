@@ -1,16 +1,7 @@
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
 .button-container {
   display: flex;
   justify-content: space-between;
-  gap: 10px; // Add space between items
-  row-gap: 10px; // Add space between rows
+  gap: 10px;
 }
 
   .googly-button {
