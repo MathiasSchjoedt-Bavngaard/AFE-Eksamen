@@ -28,7 +28,13 @@ export class CardService {
         );
   }
 
-  getCard(id: string): Observable<Card> {
-    return this.http.get<Card>(`https://api.magicthegathering.io/v1/cards/${id}`);
+  getCard(id: number): Observable<Card> {
+    return this.http.get<Card>(`https://api.magicthegathering.io/v1/cards/${id}`).pipe(
+      map((data: any) => ({
+        name: data.card.name,
+        imageUrl: data.card.imageUrl,
+        id: data.card.id
+      }))
+    );
   }
 }

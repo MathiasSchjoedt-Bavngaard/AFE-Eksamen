@@ -1,6 +1,12 @@
 <div [ngClass]="'component-wrapper'">
   <button (click)="getMtgCards()">Get Cards</button>
 
+  <!-- take value from user and set to cardId -->
+  <input type="number" value="cardId" />
+  <button (click)="getMtgCard(cardId)">Get Card</button>
+
+  
+
   <div *ngIf="mtgCards$ | async as mtgCards" [ngClass]="'content-row'">
     <div *ngFor="let card of mtgCards">
       <div *ngIf="card.imageUrl" [ngClass]="'component-wrapper'">
