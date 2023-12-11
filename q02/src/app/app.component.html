@@ -3,8 +3,10 @@
   
   <div *ngIf="mtgCards$ | async as mtgCards">
     <div *ngFor="let card of mtgCards">
-      <p>{{ card.name }}</p>
-      <img [src]="card.imageUrl" [alt]="card.name" />
+      <div *ngIf="card.imageUrl">
+        <p>{{ card.name }}</p>  
+        <img [src]="card.imageUrl" [alt]="card.name" />
+      </div>
     </div>
   </div>
 </div>

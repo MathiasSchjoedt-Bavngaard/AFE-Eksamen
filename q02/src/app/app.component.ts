@@ -17,12 +17,8 @@ export class AppComponent {
     this.cardService = cardService;
   }
 
-  ngOnInit(): void {
-    this.getMtgCards();
-  }
 
   getMtgCards(): void {
     this.mtgCards$ = this.cardService.getCards();
-    this.mtgCards$.subscribe(mtgcards => console.log(mtgcards));
   }
 }
