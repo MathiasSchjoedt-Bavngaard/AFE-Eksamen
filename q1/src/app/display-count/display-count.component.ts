@@ -10,5 +10,4 @@ import { CommonModule } from '@angular/common';
 })
 export class DisplayCountComponent {
   @Input() count: number | undefined;
-  @Output() countChange = new EventEmitter<number>();
 }
