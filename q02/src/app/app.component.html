@@ -1,17 +1,20 @@
 <div [ngClass]="'component-wrapper'">
   <button (click)="getMtgCards()">Get Cards</button>
 
-  <!-- take value from user and set to cardId -->
-  <input type="number" value="cardId" />
-  <button (click)="getMtgCard(cardId)">Get Card</button>
+  <button (click)="getMtgCard(1)">Get card that exsists</button>
+  <button (click)="getMtgCard(999999)">Get card that doesn't exsist</button>
+  <div *ngIf="mtgCard$ | async as mtgCard" [ngClass]="'content-row'">
+    <div *ngIf="mtgCard.imageUrl" [ngClass]="'component-wrapper'">
+      <p>{{ mtgCard.name }}</p>
+      <img [src]="mtgCard.imageUrl" [alt]="mtgCard.name" />
+    </div>
 
-  
-
-  <div *ngIf="mtgCards$ | async as mtgCards" [ngClass]="'content-row'">
-    <div *ngFor="let card of mtgCards">
-      <div *ngIf="card.imageUrl" [ngClass]="'component-wrapper'">
-        <p>{{ card.name }}</p>
-        <img [src]="card.imageUrl" [alt]="card.name" />
+    <div *ngIf="mtgCards$ | async as mtgCards" [ngClass]="'content-row'">
+      <div *ngFor="let card of mtgCards">
+        <div *ngIf="card.imageUrl" [ngClass]="'component-wrapper'">
+          <p>{{ card.name }}</p>
+          <img [src]="card.imageUrl" [alt]="card.name" />
+        </div>
       </div>
     </div>
   </div>

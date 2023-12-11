@@ -6,7 +6,7 @@ import { of } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   mtgCards$: Observable<Card[]> | null = null;
@@ -14,7 +14,7 @@ export class AppComponent {
   cardService: CardService;
   cardId: number = 1;
 
-  constructor(cardService: CardService) { 
+  constructor(cardService: CardService) {
     this.cardService = cardService;
   }
 
@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   getMtgCard(id: number): void {
+    console.log(id);
     this.mtgCard$ = this.cardService.getCard(id);
   }
-
 }
