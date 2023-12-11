@@ -33,7 +33,6 @@ export class CardService {
   }
 
   getCard(id: number): Observable<Card> {
-    console.log(id);
     return this.http
       .get<Card>(`https://api.magicthegathering.io/v1/cards/${id}`)
       .pipe(
@@ -45,7 +44,7 @@ export class CardService {
         catchError((err) => {
           console.log(err);
           return of({
-            name: 'Error',
+            name: 'Error! Michael says no!',
             imageUrl:
               'https://media0.giphy.com/media/zCpYQh5YVhdI1rVYpE/giphy.gif?cid=ecf05e47js0l7tkiq3pak6qxu3oo0g80idcxcpqgy53xsxao&ep=v1_gifs_search&rid=giphy.gif&ct=g',
             id: '',
