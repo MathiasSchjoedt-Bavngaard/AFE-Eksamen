@@ -82,7 +82,7 @@ result.subscribe(x => console.log(x));
 // 60
 ```
 
-See more in line  in []()
+See example in line 23 in [Card service](./src/app/card.service.ts)
 
 ## Network communication
 
@@ -91,11 +91,13 @@ All webaps need to communicate with a server to get data. Angular provides the H
 ### HttpClientModule
 The HttpClient is used to make HTTP requests to a server. It wraps requests in observables and provides methods for HTTP requests. The HttpClientModule is used by injecting the HttpClient into a component or service.
 
+When using the HttpClientModule you can simply import it into your component and start using the endpoints.
 
+See more in line 16 in [Card service injection](./src/app/app.component.ts)
 
 The HttpClient is used in combination with RxJS operators to filter and transform the data received from the server. It is initiated with `subscribe()` or the `async` pipe.
 
-See more in line  in []()
+See more in line 4 in [App.component.html](./src/app/app.component.html)
 
 ### Interceptors
 
