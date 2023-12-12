@@ -11,7 +11,7 @@
 - Explain reactive programming using RxJS
 - Explain how network communication is done in Angular according to best practices (use of HttpClientModule)
 
-## [Question 03 – Routing and SSR](./Q03/README.md)
+## [Question 03 – Routing and SSR](./q03/README.md)
 
 - Explain how routing works in Angular
 - Explain module routing and lazy-loading
