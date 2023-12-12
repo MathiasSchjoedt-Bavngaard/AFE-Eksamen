@@ -10,7 +10,7 @@ jobs:
     build:
       strategy:
         matrix:
-          path: [./q01, ./q02, ./Q03]
+          path: [./q01, ./q02, ./q03]
       runs-on: ubuntu-latest
       name:  ${{ matrix.path }}
       steps:
