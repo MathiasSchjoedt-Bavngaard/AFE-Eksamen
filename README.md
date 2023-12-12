@@ -1,12 +1,12 @@
 # AFE-Eksamen
 
-## Question 01 – Angular in general
+## [Question 01 – Angular in general](./q01/Q1-English.md)
 
 - Explain the basic Angular concepts (components, directives, modules, services, pipes)
 - Explain how dependency injection is used in Angular
 - Explain how to component-to-component communication can be implemented
 
-## Question 02 – Reactive programming
+## [Question 02 – Reactive programming](./q02/Q02-English.md)
 
 - Explain reactive programming using RxJS
 - Explain how network communication is done in Angular according to best practices (use of HttpClientModule)

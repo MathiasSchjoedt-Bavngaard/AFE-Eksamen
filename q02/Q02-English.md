@@ -10,15 +10,14 @@
 
 ## Reactive programming using RxJS
 
-Reactive extensions for JavaScript (RxJS) is a library for reactive programming using observables that makes it easier to compose asynchronous code. 
-Reactive programming is very useful when dealing with network protocalls and requests since it is asynchronous by nature.
-
+Reactive extensions for JavaScript (RxJS) is a library for reactive programming using observables that makes it easier to compose asynchronous code.
+Reactive programming is very useful when dealing with network protocols and requests since it is asynchronous by nature.
 
 ### Observables
 
 An observable is a collection of values over time. It can be used to handle asynchronous operations and events. Observables are lazy, meaning that they only execute when they have a subscriber.
 
-Hot observables are observables that are already producing values before a subscriber subscribes to it. 
+Hot observables are observables that are already producing values before a subscriber subscribes to it.
 Cold observables are observables that start producing values when a subscriber subscribes to it.
 
 It is common to use the dollar sign ($) at the end of the variable name to indicate that it is an observable.
@@ -35,13 +34,14 @@ Operators are simply put, functions.
 There are many operators but here are some of the most common ones:
 
 - of
+
 ```typescript
 import { of } from 'rxjs';
  
 of(1, 2, 3).subscribe(
-	next => console.log('next:', next),
-	err => console.log('error:', err),
-	() => console.log('the end'),
+  next => console.log('next:', next),
+  err => console.log('error:', err),
+  () => console.log('the end'),
 );
  
 // Logs:
@@ -52,6 +52,7 @@ of(1, 2, 3).subscribe(
 ```
 
 - from
+
 ```typescript
 import { from } from 'rxjs';
  
@@ -67,6 +68,7 @@ result.subscribe(x => console.log(x));
 ```
 
 - map with from (pipeable operator)
+
 ```typescript
 import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -89,6 +91,7 @@ See example in line 23 in [Card service](./src/app/card.service.ts)
 All webaps need to communicate with a server to get data. Angular provides the HttpClientModule to make it easier to communicate with a server. The HttpClientModule is a wrapper around the XMLHttpRequest interface. It is used to make HTTP requests to a server.
 
 ### HttpClientModule
+
 The HttpClient is used to make HTTP requests to a server. It wraps requests in observables and provides methods for HTTP requests. The HttpClientModule is used by injecting the HttpClient into a component or service.
 
 When using the HttpClientModule you can simply import it into your component and start using the endpoints.
