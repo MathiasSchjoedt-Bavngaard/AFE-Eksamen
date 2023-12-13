@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build_deploy:
+    strategy:
+        matrix:
+          path: [q01, q02, q03]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: See directory
+        run: |
+          ls -a
+          pwd
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./${{ matrix.path }}
+
+      - name: build to prod
+        run: npm run build:prod 
+        working-directory: ./${{ matrix.path }}
+
+      - name: deploy with james
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: Realease
+          folder: ${{ matrix.path }}/dist/${{ matrix.path }}
+          target-folder: ${{ matrix.path }}
+          token: ${{ secrets.GITHUB_TOKEN }}
