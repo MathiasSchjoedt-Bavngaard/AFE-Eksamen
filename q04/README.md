@@ -19,17 +19,17 @@ Template driven forms are forms that are created using directives. Inside the HT
 
 Some of the template directives are: NgForm, NgModel and NgModelGroup. When you import the FormsModule in your component, Angular automatically creates and attaches an NgForm directive to the `<form>` tag in the template (because NgForm has the selector form that matches `<form>` elements). This allows us to access the form data by adding a reference (f or some other name) to the form element: `<form #f="ngForm">`.
 
-See more in line 8 in [Form reference](./src/app/template-driven/template-driven.component.html) and line 17 in [Importing the FormsModule](./src/app/app.module.ts)
+See more in line 13 in [Form reference](./src/app/template-driven/template-driven.component.html) and line 11 in [Importing the FormsModule](./src/app/app.module.ts)
 
 The ngModel directive declared in the FormsModule lets you bind controls in your template-driven form to properties in your data model.
 
-See more in line 19 in [Data binding](./src/app/template-driven/template-driven.component.html)
+See more in line 25 in [Data binding](./src/app/template-driven/template-driven.component.html)
 
 Template-driven forms let direct access modify data in your template, but are less explicit than reactive forms because they rely on directives embedded in the template, along with mutable data to track changes asynchronously.
 
 When the user is done filling out the form and everything has been validated on the client, the user clicks the submit button which will trigger the onSubmit() method in the component class. The onSubmit() method will then access the form data using the reference to the form element and the ngModel directive.
 
-See more in line 8 in [Form reference](./src/app/template-driven/template-driven.component.html) and line 61 in [Submit button](./src/app/template-driven/template-driven.component.html) and line 13 in [Submit form](./src/app/template-driven/template-driven.component.ts)
+See more in line 13 in [Form reference](./src/app/template-driven/template-driven.component.html) and line 77 in [Submit button](./src/app/template-driven/template-driven.component.html) and line 12 in [Submit form](./src/app/template-driven/template-driven.component.ts)
 
 ## Reactive forms
 
@@ -87,7 +87,7 @@ export class ProfileEditorComponent {
 }
 ```
 
-See more in line  in [Formbuilder]()
+See more in line 10 in [Formbuilder](./src/app/reactive/reactive.component.ts)
 
 ## Key differences
 
