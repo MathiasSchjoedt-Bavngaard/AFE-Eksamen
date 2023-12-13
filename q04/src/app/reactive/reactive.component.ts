@@ -16,6 +16,8 @@ export class ReactiveComponent {
   constructor(private fb: FormBuilder) {}
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    alert(this.userForm.value);
+    alert(
+      'Submitted via reactive form:\n' + JSON.stringify(this.userForm.value)
+    );
   }
 }

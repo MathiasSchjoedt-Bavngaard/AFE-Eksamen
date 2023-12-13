@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from '../user';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-template-driven',
   templateUrl: './template-driven.component.html',
@@ -7,17 +8,11 @@ import { User } from '../user';
 })
 export class TemplateDrivenComponent {
   model = new User('', '', '', '');
-  submitted = false;
-  sumbittedModel = new User('', '', '', '');
 
-  onSubmit() {
-    console.log('onSubmit');
-    this.sumbittedModel = new User(
-      this.model.firstName,
-      this.model.lastName,
-      this.model.email,
-      this.model.phone
+  onSubmit(userForm: NgForm) {
+    // Do something with the form data here
+    alert(
+      'Submitted via template-driven form:\n' + JSON.stringify(userForm.value)
     );
-    this.submitted = true;
   }
 }

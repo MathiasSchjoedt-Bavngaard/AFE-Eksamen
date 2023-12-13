@@ -1,51 +1,54 @@
 <div
   [ngClass]="{
     'component-wrapper': true,
-    'invalid-form': !userForm.valid && email.dirty
+    'invalid-form':
+      userForm.invalid &&
+      userForm.touched &&
+      phone.touched &&
+      email.touched &&
+      firstName.touched
   }"
 >
   <h1>Template-driven</h1>
-  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
     <label
-      [ngClass]="{ 'invalid-label': !firstName.valid && firstName.dirty }"
+      [ngClass]="{ 'invalid-label': firstName.invalid && firstName.touched }"
       for="firstName"
       >First name*</label
     >
     <input
-      [ngClass]="{ 'invalid-input': !firstName.valid && firstName.dirty }"
+      [ngClass]="{ 'invalid-field': firstName.invalid && firstName.touched }"
       type="text"
       id="firstName"
       required
+      pattern="^[a-zA-ZÀ-ÖØ-öø'-]{2,}"
       [(ngModel)]="model.firstName"
       name="firstName"
       #firstName="ngModel"
     />
-    <small [hidden]="!(!firstName.valid && firstName.dirty)">
-      Name is required
-    </small>
 
     <label
-      [ngClass]="{ 'invalid-label': !lastName.valid && lastName.dirty }"
+      [ngClass]="{ 'invalid-label': lastName.invalid && lastName.touched }"
       for="lastName"
       >Last name</label
     >
     <input
-      [ngClass]="{ 'invalid-input': !lastName.valid && lastName.dirty }"
+      [ngClass]="{ 'invalid-field': lastName.invalid && lastName.touched }"
       type="text"
       id="lastName"
+      pattern="[a-zA-ZÀ-ÖØ-öø'-]{2,}"
       [(ngModel)]="model.lastName"
       name="lastName"
       #lastName="ngModel"
     />
 
-
     <label
-      [ngClass]="{ 'invalid-label': !email.valid && email.dirty }"
+      [ngClass]="{ 'invalid-label': email.invalid && email.touched }"
       for="email"
       >E-mail*</label
     >
     <input
-      [ngClass]="{ 'invalid-input': !email.valid && email.dirty }"
+      [ngClass]="{ 'invalid-field': email.invalid && email.touched }"
       type="email"
       id="email"
       required
@@ -54,16 +57,14 @@
       name="email"
       #email="ngModel"
     />
-    <small [hidden]="!(!email.valid && email.dirty)">Email is required</small>
-
 
     <label
-      [ngClass]="{ 'invalid-label': !phone.valid && phone.dirty }"
+      [ngClass]="{ 'invalid-label': phone.invalid && phone.touched }"
       for="phone"
       >Phone*</label
     >
     <input
-      [ngClass]="{ 'invalid-input': !phone.valid && phone.dirty }"
+      [ngClass]="{ 'invalid-field': phone.invalid && phone.touched }"
       type="text"
       id="phone"
       required
@@ -72,19 +73,70 @@
       name="phone"
       #phone="ngModel"
     />
-    <small [hidden]="!(!phone.valid && phone.dirty)">Phone is required</small>
-     <button type="submit" [disabled]="!userForm.form.valid">Submit</button>
-     <small> * Requirred </small>
+
+    <button type="submit" [disabled]="userForm.form.invalid">Submit</button>
+    <small> * Requirred </small>
   </form>
-  <h2>Model</h2>
-  <pre>{{ model | json }}</pre>
-  <div [hidden]="!submitted">
-    <h2>You submitted the following:</h2>
-    <ul>
-      <li>First name: {{ sumbittedModel.firstName }}</li>
-      <li>Last name: {{ sumbittedModel.lastName }}</li>
-      <li>Phone: {{ sumbittedModel.phone }}</li>
-      <li>Email: {{ sumbittedModel.email }}</li>
-    </ul>
+  <div>
+    <h2>Form Value</h2>
+    <pre>{{ userForm.value | json }}</pre>
+    <h2>Form Status</h2>
+    <pre
+      style="color: green"
+      [ngClass]="{'invalid-label': userForm.invalid,  }"
+      >{{ userForm.status | json }}</pre
+    >
+  </div>
+
+
+  <!-- WITHOUT CLASSES -->
+  <div hidden>
+    <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+      <label for="firstName">First name*</label>
+      <input
+        type="text"
+        id="firstName"
+        required
+        pattern="^[a-zA-ZÀ-ÖØ-öø'-]{2,}"
+        [(ngModel)]="model.firstName"
+        name="firstName"
+        #firstName="ngModel"
+      />
+
+      <label for="lastName">Last name</label>
+      <input
+        type="text"
+        id="lastName"
+        pattern="[a-zA-ZÀ-ÖØ-öø'-]{2,}"
+        [(ngModel)]="model.lastName"
+        name="lastName"
+        #lastName="ngModel"
+      />
+
+      <label for="email">E-mail*</label>
+      <input
+        type="email"
+        id="email"
+        required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+        [(ngModel)]="model.email"
+        name="email"
+        #email="ngModel"
+      />
+
+      <label for="phone">Phone*</label>
+      <input
+        type="text"
+        id="phone"
+        required
+        pattern="[0-9]{8}"
+        [(ngModel)]="model.phone"
+        name="phone"
+        #phone="ngModel"
+      />
+
+      <button type="submit" [disabled]="userForm.form.invalid">Submit</button>
+      <small> * Requirred </small>
+    </form>
   </div>
 </div>
