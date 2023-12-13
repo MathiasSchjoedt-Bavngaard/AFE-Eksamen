@@ -4,12 +4,12 @@
     'invalid-form': !userForm.valid && email.dirty
   }"
 >
-  <h1>Template-driven form</h1>
+  <h1>Template-driven</h1>
   <form (ngSubmit)="onSubmit()" #userForm="ngForm">
     <label
       [ngClass]="{ 'invalid-label': !firstName.valid && firstName.dirty }"
       for="firstName"
-      >First name</label
+      >First name*</label
     >
     <input
       [ngClass]="{ 'invalid-input': !firstName.valid && firstName.dirty }"
@@ -33,19 +33,16 @@
       [ngClass]="{ 'invalid-input': !lastName.valid && lastName.dirty }"
       type="text"
       id="lastName"
-      required
       [(ngModel)]="model.lastName"
       name="lastName"
       #lastName="ngModel"
     />
-    <small [hidden]="!(!firstName.valid && firstName.dirty)">
-      Name is required
-    </small>
+
 
     <label
       [ngClass]="{ 'invalid-label': !email.valid && email.dirty }"
       for="email"
-      >E-mail</label
+      >E-mail*</label
     >
     <input
       [ngClass]="{ 'invalid-input': !email.valid && email.dirty }"
@@ -58,12 +55,12 @@
       #email="ngModel"
     />
     <small [hidden]="!(!email.valid && email.dirty)">Email is required</small>
-    <button type="submit" [disabled]="!userForm.form.valid">Submit</button>
+
 
     <label
       [ngClass]="{ 'invalid-label': !phone.valid && phone.dirty }"
       for="phone"
-      >Phone</label
+      >Phone*</label
     >
     <input
       [ngClass]="{ 'invalid-input': !phone.valid && phone.dirty }"
@@ -76,6 +73,8 @@
       #phone="ngModel"
     />
     <small [hidden]="!(!phone.valid && phone.dirty)">Phone is required</small>
+     <button type="submit" [disabled]="!userForm.form.valid">Submit</button>
+     <small> * Requirred </small>
   </form>
   <h2>Model</h2>
   <pre>{{ model | json }}</pre>

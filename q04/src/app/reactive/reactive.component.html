@@ -1,3 +1,51 @@
-<div [ngClass]="'component-wrapper'">
-  <p>reactive works!</p>
+
+<!-- div border should be red on invalid form:  -->
+<div [ngClass]="{'component-wrapper': true, 'invalid-form':
+!userForm.valid &&
+  userForm.dirty &&
+ userForm.controls.phone.dirty &&
+  userForm.controls.email.dirty &&
+    userForm.controls.firstName.dirty }" >
+    <h1>Reactive</h1>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" >
+      <label [ngClass]="{'invalid-label': !userForm.controls.firstName.valid && userForm.controls.firstName.dirty }" for="first-name">First name* </label>
+      <input [ngClass]="{'invalid-field': !userForm.controls.firstName.valid && userForm.controls.firstName.dirty}" type="text" id="first-name" formControlName="firstName" />
+      <label [ngClass]="{'invalid-label': !userForm.controls.lastName.valid && userForm.controls.lastName.dirty }" for="last-name">Last name</label>
+      <input [ngClass]="{'invalid-field': !userForm.controls.lastName.valid && userForm.controls.lastName.dirty}" type="text" id="last-name" formControlName="lastName" />
+      <label [ngClass]="{'invalid-label': !userForm.controls.email.valid && userForm.controls.email.dirty }" for="email">E-mail* </label>
+      <input [ngClass]="{'invalid-field': !userForm.controls.email.valid && userForm.controls.email.dirty}" type="text" id="email" formControlName="email" />
+      <label [ngClass]="{'invalid-label': !userForm.controls.phone.valid && userForm.controls.phone.dirty }" for="phone">Phone* </label>
+      <input [ngClass]="{'invalid-field': !userForm.controls.phone.valid && userForm.controls.phone.dirty}" type="tel" id="phone" formControlName="phone"  />
+      <button type="submit" [disabled]="!userForm.valid">Submit</button>
+      <small> * Requirred </small>
+  </form>
+<div >
+  <p>Form Value </p>
+  <pre>{{ userForm.value | json }}</pre>
+  <p>Form Status </p>
+  <pre style="color: green;" [ngClass]="{'invalid-label': userForm.invalid,  }">{{ userForm.status | json }}</pre>
+</div>
+
+
+<div id="hiddendiv" [hidden]="true">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()"  >
+
+      <label for="first-name">First Name* </label>
+      <input type="text" id="first-name" formControlName="firstName" />
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" formControlName="lastName" />
+
+      <label for="email">Email* </label>
+      <input type="text" id="email" formControlName="email" />
+
+      <label for="phone">Phone Number* </label>
+      <input type="tel" id="phone" formControlName="phone"  />
+
+      <button type="submit" [disabled]="!userForm.valid">Submit</button>
+
+  </form>
+</div>
+
+
 </div>
