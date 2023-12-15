@@ -1,8 +1,10 @@
-name: test-pull-request
+name: test-pull-request 
 on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'q04/**'
     types: [opened, synchronize, reopened]
 permissions:
   contents: read
