@@ -63,7 +63,7 @@ We have made the installation and online status in side the Footer: ![Connection
 Add the @angular/pwd library to set up the Angular service worker. 
 we make changes in these files
 - package.json: The @angular/service-worker library was added.
-- src/app/app.module.ts: The service worker configuration was added.
+- src/app/app.module.ts: The service worker configuration was added. `````
 - src/index.html: Manifest file configuration and theme color was added.
 
 
@@ -80,4 +80,14 @@ this uses the Service Worker Update from angular to update the version of the ap
 
 We then make a popup as seen here:
 ![update](images/update.png)
-and the way we make the pop up is in the teplate. but in the TS we need to tjeck what type of device we are using.
+and the way we make the pop up is in the [template line 11-22](.\src\app\footer\footer.component.html).  
+
+### Different Devices. 
+
+When making a progessive web app there is some things we cant just make usable to every type of device.. fx how to download. is it from a android / chromium device or a aplle device. 
+
+When we load the Update Module we check for **platform** type in the `loadModalPwa()`
+
+We also does this in the Template where we just look at the field`modalPwaPlatform` to see to different "divs" 
+
+see [template line 24-50](.\src\app\footer\footer.component.html).  
