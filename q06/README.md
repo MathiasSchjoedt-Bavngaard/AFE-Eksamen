@@ -23,58 +23,61 @@
 
 - **Progressive** - Works for every user, regardless of browser choice because it's built with progressive enhancement as a core tenet
 
-- **Responsive** - Fits any form factor: desktop, mobile, tablet, or whatever is next.
+- **Responsive** - Fits any form factor: desktop, mobile, tablet, or whatever is next. See evt [q05](https://ninjaneer127.github.io/AFE-Eksamen/q05/)
+
 - **Connectivity** independent - Enhanced with service workers to work offline or on
-low-quality networks.
+low-quality networks. see storage 
+
 - **App-like** - Feels like an app to the user with app-style interactions and navigation because it's built on the app shell model.
+
 - **Fresh** - Always up-to-date thanks to the service worker update process.
+
 - **Safe** - Served via HTTPS to prevent snooping and to ensure content hasn't been tampered with.
+
 - **Discoverable** - Is identifiable as an "application" thanks to W3C manifest and
 service worker registration scope, allowing search engines to find it.
+
 - **Re-engageable** - Makes re-engagement easy through features like push notifications.
+
 - **Installable** - Allows users to "keep" apps they find most useful on their home screen without the hassle of an app store.
 - **Linkable** - Easily share via URL, does not require complex installation.
 
-## Lazy-loading
+## Storage 
 
-Modules are early loaded by default. This means that all modules are loaded when the application is loaded. This is not optimal as it can lead to performance issues.
+To make use of a app in Offline mode its nice to save in a offline storrage like the local database. 
 
-Lazy-loading is a technique that allows you to load modules only when they are needed. You configure routes to only load when needed. Since the bundle size is smaller on the initial load it will improve the user experience significantly. Lazy loading in the router is implemented by using the loadChildren property.
+and example is made where we show storedData if any up until we load the data.  
 
-See more in line 13 in [Lazy-loading](./src/app/app-routing.module.ts)
+See how we use this in line 5 in [cards List template](.\src\app\credit-card\credit-card-list\credit-card-list.component.html) here we "fetch" the data and then set loading and shows the stored values. 
 
-## Route information in the navigated to component
+and to see how we store and extract the data look in [cards List TS](.\src\app\credit-card\credit-card-list\credit-card-list.component.ts)
 
-In order to access route information in the navigated to component you need to inject the ActivatedRoute service in the constructor of the component. The ActivatedRoute service contains information about the route.
+## Implementing PWA 
+<!-- 
+see https://hackernoon.com/building-progressive-web-application-pwa-with-angular 
+ -->
 
-See more in line 12 in [ActivatedRoute](./src/app/number/number.component.ts)
+We have made the installation and online status in side the Footer: ![Connections](images/Connectionstatus.png)
 
-For applications where you need to know where you are in the specific component this can be useful. In our case we simply print the number of the route in the component.
+### Make it installable 
+Add the @angular/pwd library to set up the Angular service worker. 
+we make changes in these files
+- package.json: The @angular/service-worker library was added.
+- src/app/app.module.ts: The service worker configuration was added.
+- src/index.html: Manifest file configuration and theme color was added.
 
-See more in line 4 in [Route information in the navigated to component](./src/app/number/number.component.html)
 
-## Route guards
+### Check online status
+a Important thing is the "fresh" data vibe. this is done be using the window.navigator.online se line 45-48 [code](.\src\app\footer\footer.component.ts) 
 
-Route guards are used to prevent unauthorized users from accessing certain routes. There are four types of route guards: CanActivate, CanActivateChild, CanDeactivate and CanLoad. CanActivate is used to prevent unauthorized users from accessing a route. CanActivateChild is used to prevent unauthorized users from accessing a child route. CanDeactivate is used to prevent users from leaving a route. CanLoad is used to prevent unauthorized users from loading a module.
+We also add a eventlistner. to see if this changes on [line 25](.\src\app\footer\footer.component.ts)
 
-The guard can either be synchronous or asynchronous. A synchronous guard returns a boolean value. An asynchronous guard returns an observable or a promise.
+### Update App
 
-When implementing a guard you need to implement the CanActivate interface. The CanActivate interface contains a canActivate method that returns a boolean value, an observable or a promise. The canActivate method takes two parameters: the activated route snapshot and the router state snapshot. The activated route snapshot contains information about the route. The router state snapshot contains information about the router. You can also chose to implement the CanActivateChild, CanDeactivate or CanLoad interface.
+When Downloaded a update notfication should be implemented 
+this is done in [line 28-50 ](.\src\app\footer\footer.component.ts)
+this uses the Service Worker Update from angular to update the version of the app.
 
-See more in line 4 in [Route guards](./src/app/pick.guard.ts)
-
-In order to use a guard in the router you need to add it to the canActivate, canActivateChild, canDeactivate or canLoad property.
-
-See more in line 24 in [Using guards in the router](./src/app/app-routing.module.ts)
-
-## Server-Side Rendering (SSR)
-
-Server-Side Rendering (SSR) is a technique that allows you to render your application on the server instead of the client. This is useful for SEO and performance reasons as it allows the search engine to crawl your applications HTML.
-
-### Pre-rendering
-
-Pre-rendering allows you to run a client side application at build time to capture its state.
-
-### Rehydration
-
-Rehydration is the process of "booting up" JavaScript views on the client such that they use the server side generated HTML's DOM tree as well as the data.
+We then make a popup as seen here:
+![update](images/update.png)
+and the way we make the pop up is in the teplate. but in the TS we need to tjeck what type of device we are using.
