@@ -1,9 +1,16 @@
-name: Deploy to GitHub Pages
+name: Deploy Angular to GitHub Pages 📐 
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'q01/**'
+      - 'q02/**'
+      - 'q03/**'
+      - 'q04/**'
+      - 'q05/**'
+      - 'q06/**'
 
   workflow_dispatch:
 
@@ -13,17 +20,23 @@ permissions:
 jobs:
   build_deploy:
     strategy:
+        fail-fast: false
         matrix:
-          path: [q01, q02, q03]
+          path: [q01, q02, q03, q04, q05, q06]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: See directory
+      - name: Check if Directory Exsist
         run: |
-          ls -a
-          pwd
+          if [ -d ${{ matrix.path }} ]; then
+            echo "Directory Exists - ${{ matrix.path }} continuing"
+          else
+            echo "Directory - ${{ matrix.path }} -  Does Not Exist - Exiting with Success"
+            exit 0
+          fi
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
