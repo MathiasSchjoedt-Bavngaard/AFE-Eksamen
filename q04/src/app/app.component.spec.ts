@@ -1,13 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { TemplateDrivenComponent } from './template-driven/template-driven.component';
-import { ReactiveComponent } from './reactive/reactive.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent, TemplateDrivenComponent, ReactiveComponent],
-    imports: [FormsModule, ReactiveFormsModule],
+    imports: [AppModule],
   }));
 
   it('should create the app', () => {
