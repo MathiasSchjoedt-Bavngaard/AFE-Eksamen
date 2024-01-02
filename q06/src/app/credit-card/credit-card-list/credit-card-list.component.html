@@ -1,0 +1,5 @@
+<h1>
+    Credit Card List
+</h1>
+
+<app-credit-card-list-item *ngFor="let card of creditCards$ | async" [creditCard]="card"></app-credit-card-list-item>
