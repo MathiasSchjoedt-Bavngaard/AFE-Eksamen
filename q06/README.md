@@ -60,9 +60,9 @@ see https://hackernoon.com/building-progressive-web-application-pwa-with-angular
 We have made the installation and online status in side the Footer: ![Connections](images/Connectionstatus.png)
 
 ### Make it installable 
-Add the @angular/pwd library to set up the Angular service worker. 
+Add the `@angular/pwd` library to set up the Angular service worker. 
 we make changes in these files
-- package.json: The @angular/service-worker library was added.
+- package.json: The `@angular/service-worker` library was added.
 - src/app/app.module.ts: The service worker configuration was added. `````
 - src/index.html: Manifest file configuration and theme color was added.
 
