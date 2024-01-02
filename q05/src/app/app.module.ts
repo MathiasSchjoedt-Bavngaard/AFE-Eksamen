@@ -8,13 +8,15 @@ import { MaterialComponent } from './material/material.component';
 import { TailwindComponent } from './tailwind/tailwind.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicComponent,
     MaterialComponent,
-    TailwindComponent
+    TailwindComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
