@@ -17,6 +17,7 @@ on:
 jobs:
     build:
       strategy:
+        fail-fast: false
         matrix:
           path: [./q01, ./q02, ./q03, ./q04, ./q05, ./q06]
       runs-on: ubuntu-latest
