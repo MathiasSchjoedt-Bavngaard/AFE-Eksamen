@@ -38,8 +38,8 @@ jobs:
         working-directory: ./${{ matrix.path }}
 
 
-      - name: Run Jasmine tests
-        run: npm run test -- --no-watch 
+      - name: Run Karma tests
+        run: npm run testCI 
         working-directory: ./${{ matrix.path }}
         
   Test-and-get-coverage-report:
@@ -67,8 +67,8 @@ jobs:
         working-directory: ./${{ matrix.path }}
 
 
-      - name: Run Jasmine tests
-        run: npm run test -- --no-watch 
+      - name: Run Karma tests
+        run: npm run testCI 
         working-directory: ./${{ matrix.path }}
         continue-on-error: true
 
