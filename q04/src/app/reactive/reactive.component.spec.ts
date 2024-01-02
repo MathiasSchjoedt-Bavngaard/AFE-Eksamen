@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReactiveComponent } from './reactive.component';
+import { AppModule } from '../app.module';
 
 describe('ReactiveComponent', () => {
   let component: ReactiveComponent;
@@ -8,7 +9,7 @@ describe('ReactiveComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ReactiveComponent]
+      imports: [AppModule],
     });
     fixture = TestBed.createComponent(ReactiveComponent);
     component = fixture.componentInstance;
