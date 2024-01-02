@@ -22,7 +22,7 @@ export class CreditCardService {
 
   getCreditCards(): Observable<CreditCard[]> {
     let snackref = this.snackBar.open('Getting all cards', 'Close');
-    return this.http
+    let cards =  this.http
       .get<CreditCard[]>(`${this.rootUrl + this.port}/cards/`)
       .pipe(
         //map is closing loading snack bar and opening success snack bar
@@ -41,11 +41,12 @@ export class CreditCardService {
 
         catchError((e) => this.handleErrorCreditCardNumber(e, 0))
       );
+      return cards;
   }
 
   getCreditCard(card_number: number): Observable<CreditCard> {
     let snackref = this.snackBar.open(`Getting card ${card_number}`, 'Close');
-    return this.http
+    let card = this.http
       .get<CreditCard>(`${this.rootUrl + this.port}/cards/${card_number}`)
       .pipe(
         //map is closing loading snack bar and opening success snack bar
@@ -60,6 +61,8 @@ export class CreditCardService {
 
         catchError((e) => this.handleErrorCreditCardNumber(e, card_number))
       );
+      
+      return card;
   }
 
   deleteCard(card_number: number, location?: Location): Observable<CreditCard> {

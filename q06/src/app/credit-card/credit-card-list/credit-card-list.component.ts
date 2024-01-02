@@ -13,10 +13,19 @@ AsyncPipe;
 })
 export class CreditCardListComponent implements OnInit {
   creditCards$: Observable<CreditCard[]> | null = null;
+  storedCards: CreditCard[] = [];
   constructor(CreditCardService: CreditCardService) {
+    this.storedCards = localStorage.getItem('cards') ? JSON.parse(localStorage.getItem('cards') || '{}') : [];
+    
     this.creditCards$ = CreditCardService.getCreditCards();
+    this.creditCards$.subscribe({
+      next: (value) => {
+        localStorage.setItem('cards', JSON.stringify(value));
+      },
+    });
   }
   ngOnInit(): void {
     this.creditCards$ = this.creditCards$;
+    this.storedCards = this.storedCards;
   }
 }
