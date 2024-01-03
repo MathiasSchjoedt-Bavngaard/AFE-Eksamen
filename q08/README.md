@@ -7,19 +7,33 @@
 
 # What is search egnine optimization 
 
+its a stragegy to make sure your website is higher i google search 
+
 ## Ranking 
 
+The placement of your website compared to your competetor. The higher you are on searches the more your website will be visited. 
+
 ## Content 
+
+
 
 ## Traffic
 
 # What affects SEO ranking?
 
-## Sitemap 
+## Sitemap  
+
+When the webcrawlers want to visit sites. They can crawl through links . The primary purpose of a sitemap is to list URLs to ensure that search engines can find and crawl them. Sitemaps usually include basic information such as the URL, last modification date, change frequency, and priority of the pages on your site.
+
+For our github-pages we made a [sitemap ](./../sitemap.xml) here all the urls are listed.
+
 
 ## Metaheader 
+[HTML < meta > tag](https://www.w3schools.com/tags/tag_meta.asp)
 
 ## Content 
+
+
 
 ## Links  
 To make sure SE knows what category your website belongs to, it looks at the links of your webpage. 
@@ -37,3 +51,7 @@ Now this link from the atomic f
 
 
 ## Performance 
+
+
+# Core Web Vitals
+
