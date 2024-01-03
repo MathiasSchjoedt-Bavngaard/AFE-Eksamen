@@ -36,7 +36,7 @@ getServerSideProps is implemented the same way as getStaticProps but it is used 
 
 Client-side rendering **generates HTML on the client**. This is the slowest method because the HTML is generated on each request. It is also the worst method for SEO because the HTML is not generated until the client has loaded the page.
 
-It is possible to make a [Client component](.\nextjs-dashboard\app\ui\invoices\pagination.tsx) by adding `'use client'` in the top of a component. This will make the component render on the client, which is nessaary to make the component interactive on the UI. When using `'use client'` all other modules loaded into it will also be loaded on the client.
+It is possible to make a [Client component](./nextjs-dashboard/app/ui/invoices/pagination.tsx) by adding `'use client'` in the top of a component. This will make the component render on the client, which is nessaary to make the component interactive on the UI. When using `'use client'` all other modules loaded into it will also be loaded on the client.
 
 It is only in Client components that it is possible to use hooks like `useEffect` and `useRouter`. 
 
@@ -65,7 +65,7 @@ A shared layout can be created in the [Layout](./nextjs-blog/components/layout.j
 
 In the app router structure pages are placed in the `app` folder.
 
-There are different file conventions seen in the image below. All the files are automatically rendered in the hierarchy seen in the image, but can also be added manually as seen [earlier](.\nextjs-dashboard\app\dashboard/(overview)\page.tsx)
+There are different file conventions seen in the image below. All the files are automatically rendered in the hierarchy seen in the image, but can also be added manually as seen [earlier](./nextjs-dashboard/app/dashboard/(overview)/page.tsx)
 
 ![App router structure](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Ffile-conventions-component-hierarchy.png&w=1920&q=75&dpl=dpl_6CEmJB9zVD2hrQWKMJxksLPfyWfB)
 
@@ -75,4 +75,4 @@ Examples of the files are:
 
 When it is nesseccary to fetch large amounts of data the [loading](./nextjs-dashboard/app/dashboard/(overview)/loading.tsx) component can be used. It shows an instant loading state from the server while the content of a route segment loads. Furthermore it is possible to stream data to the client by using the [Suspense](./nextjs-dashboard/app/dashboard/(overview)/page.tsx) component. It takes a fallback component that is shown while the data is loading. This way a page will show some content while the rest of the page is loading.
 
-[error](.\nextjs-dashboard\app\dashboard\invoices\error.tsx) is used to handle errors. It takes a fallback component that is shown if an error occurs.
+[error](./nextjs-dashboard/app/dashboard/invoices/error.tsx) is used to handle errors. It takes a fallback component that is shown if an error occurs.
