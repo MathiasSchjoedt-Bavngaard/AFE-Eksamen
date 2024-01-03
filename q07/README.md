@@ -61,8 +61,6 @@ Further, it is possible to add a `pages/_document.js` file to customize the HTML
 
 A shared layout can be created in the [Layout](./nextjs-blog/components/layout.js) component. This component is then used in the pages that need it in the example it is used in the [index file](./nextjs-blog/pages/index.js).
 
-![Pages router structure](./images/pages-router.png)
-
 ### App router
 
 In the app router structure pages are placed in the `app` folder.
