@@ -26,7 +26,8 @@ When the webcrawlers want to visit sites. They can crawl through links . The pri
 
 For our github-pages we made a [sitemap ](./../sitemap.xml) here all the urls are listed. 
 
-We can use this to create a visual sitemap or use in in google console to make sure google can find all the pages. and faster ![Alt text](image-2.png)
+We can use this to create a visual sitemap or use in in google console to make sure google can find all the pages. and faster ![Alt text](image-2.png) 
+see [octopus ](https://octopus.do/0slkicvjvyq9)
 
 
 ## Metaheader 
@@ -77,8 +78,18 @@ To get a good SEO score you need to have a good performance. This means how well
 The better your website performs the better your SEO score will be and higher ranking. 
 
 # Core Web Vitals
+Core Web Vitals is a subset of Web Vitals, and currently consists of three metrics that measure:
 
-## What is Core Web Vitals?
+- loading performance, 
+- interactivity
+- visual stability of the page.
+
+These mectrics are a way to measure the performance of a website and therefor also a way to measure the user experience. 
+Google wants to give the user the best experience. 
+![Alt text](image-3.png)
+
+## Loading 
+how long does it take to load the page. not the
 
 # Next.js
 
