@@ -1,15 +1,13 @@
-# Q04
+# Q04 Angular forms and testing
 
 <!-- References to code will be made in markdown by using: See more in line XX in [name of snippet]("PATH_TO_FILE") -->
 
-## Introduction - What is it about / what will you talk about
+**Questions:**
 
-<!-- Cover the following points:
-    - Explain template-driven forms in Angular
-    - Explain reactive forms in Angular
-    - Discuss the pros and cons on the different approaches
-    - Explain how to test Angular apps
--->
+- Explain template-driven forms in Angular
+- Explain reactive forms in Angular
+- Discuss the pros and cons on the different approaches
+- Explain how to test Angular apps
 
 Handling user input is the most crucial part of a web application. Angular provides two ways of handling forms: template-driven forms and reactive forms. Template-driven forms are the most common approach and are similar to AngularJS. Reactive forms are a newer approach and are more robust and scalable. The choice of form depends on the use case. Simple forms are easier to implement using template-driven forms while more complex forms are easier to implement using reactive forms. You should chooes a template form if everything can be done using the template. If you need more control over the form, you should choose a reactive form.
 

@@ -1,16 +1,14 @@
-# Q1
+# Q01 Angular in general
 
 <!-- If not enough: Angular data binding (Angular Components) -->
 
 <!-- References to the code will be made in markdown by using: See more in line XX in [Name of snippet]("PATH_TO_FILE") -->
 
-## Introduction - What is it about / what will you talk about
+**Quesitons:**
 
-<!-- Cover the following points:
-    - Explain the basic Angular concepts (components, directives, modules, services, pipes)
-    - Explain how dependency injection is used in Angular
-    - Explain how to component-to-component communication can be implemented 
--->
+- Explain the basic Angular concepts (components, directives, modules, services, pipes)
+- Explain how dependency injection is used in Angular
+- Explain how to component-to-component communication can be implemented
 
 Angular is an open-source JavaScript client side MVC framework developed and maintained by Google. Angular is a complete rewrite of its popular predecessor AngularJS. Angular applications are primarily implemented by using TypeScript, HTML and CSS. Angular is a component based framework, where components are the main building blocks of an Angular application. Components are reusable and can be nested inside each other. Components are also the main way of communicating between different parts of an Angular application. Angular applications are built by using a combination of components, directives, modules, services and pipes.
 

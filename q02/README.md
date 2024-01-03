@@ -1,12 +1,10 @@
-# Q02
+# Q02 Reactive programming
 <!-- References to code will be made in markdown by using: See more in line XX in [name of snippet]("PATH_TO_FILE") -->
 
-## Introduction - What is it about / what will you talk about
+**Questions:**
 
-<!-- Cover the following points:
-    - Explain reactive programming using RxJS
-    - Explain how network communication is done in Angular according to best practices (use of HttpClientModule)
--->
+- Explain reactive programming using RxJS
+- Explain how network communication is done in Angular according to best practices (use of HttpClientModule)
 
 ## Reactive programming using RxJS
 
