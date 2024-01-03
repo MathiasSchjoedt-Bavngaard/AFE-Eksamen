@@ -1,23 +1,13 @@
-# Q06
+# Q06 Progressive Web Apps
 
 <!-- References to code will be made in markdown by using: See more in line XX in [name of snippet]("PATH_TO_FILE") -->
 
 ## Introduction - What is it about / what will you talk about
 
-<!-- Cover the following points:
-    - Explain what does PWA include 
-        - Progressive 
-        - Responsive 
-        - Connectivity 
-        - App-like
-        - Fresh 
-        - Safe 
-        - Discoverable
-        - Re-engageable
-        - Installable 
-        - Linkable 
-    - 
--->
+**Questions:**
+
+- Explain the concept of PWA
+- Show how to implement a PWA with Angular
 
 ## What is A PWA
 
