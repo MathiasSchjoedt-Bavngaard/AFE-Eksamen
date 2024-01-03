@@ -48,9 +48,9 @@ To make use of a app in Offline mode its nice to save in a offline storrage like
 
 and example is made where we show storedData if any up until we load the data.  
 
-See how we use this in line 5 in [cards List template](.\src\app\credit-card\credit-card-list\credit-card-list.component.html) here we "fetch" the data and then set loading and shows the stored values. 
+See how we use this in line 5 in [cards List template](./src/app/credit-card/credit-card-list/credit-card-list.component.html) here we "fetch" the data and then set loading and shows the stored values. 
 
-and to see how we store and extract the data look in [cards List TS](.\src\app\credit-card\credit-card-list\credit-card-list.component.ts)
+and to see how we store and extract the data look in [cards List TS](./src/app/credit-card/credit-card-list/credit-card-list.component.ts)
 
 ## Implementing PWA 
 <!-- 
@@ -68,19 +68,19 @@ we make changes in these files
 
 
 ### Check online status
-a Important thing is the "fresh" data vibe. this is done be using the window.navigator.online se line 45-48 [code](.\src\app\footer\footer.component.ts) 
+a Important thing is the "fresh" data vibe. this is done be using the window.navigator.online se line 45-48 [code](./src/app/footer/footer.component.ts) 
 
-We also add a eventlistner. to see if this changes on [line 25](.\src\app\footer\footer.component.ts)
+We also add a eventlistner. to see if this changes on [line 25](./src/app/footer/footer.component.ts)
 
 ### Update App
 
 When Downloaded a update notfication should be implemented 
-this is done in [line 28-50 ](.\src\app\footer\footer.component.ts)
+this is done in [line 28-50 ](./src/app/footer/footer.component.ts)
 this uses the Service Worker Update from angular to update the version of the app.
 
 We then make a popup as seen here:
 ![update](images/update.png)
-and the way we make the pop up is in the [template line 11-22](.\src\app\footer\footer.component.html).  
+and the way we make the pop up is in the [template line 11-22](./src/app/footer/footer.component.html).  
 
 ### Different Devices. 
 
@@ -90,4 +90,4 @@ When we load the Update Module we check for **platform** type in the `loadModalP
 
 We also does this in the Template where we just look at the field`modalPwaPlatform` to see to different "divs" 
 
-see [template line 24-50](.\src\app\footer\footer.component.html).  
+see [template line 24-50](./src/app/footer/footer.component.html).  
