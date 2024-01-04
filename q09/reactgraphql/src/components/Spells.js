@@ -1,4 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 const query = gql`
   query Query($index: String) {
@@ -27,7 +29,7 @@ export default function Spells({ classIndex }) {
     variables: { index: selectedClass },
   });
 
-  if (loading) return null
+  if (loading) return <CircularProgress />;
   if (error) return <p>Error: {error.message}</p>;
 
   console.log(data);
