@@ -23,9 +23,10 @@ const query = gql`
 `;
 
 export default function Spells({ classIndex }) {
-  console.log(classIndex);
+  const selectedClass = classIndex.toLowerCase();
+  console.log(selectedClass);
   const { loading, error, data } = useQuery(query, {
-    variables: { index: classIndex },
+    variables: { index: selectedClass },
   });
 
   if (loading) return null
