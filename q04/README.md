@@ -1,15 +1,13 @@
-# Q04
+# Q04 Angular forms and testing
 
 <!-- References to code will be made in markdown by using: See more in line XX in [name of snippet]("PATH_TO_FILE") -->
 
-## Introduction - What is it about / what will you talk about
+**Questions:**
 
-<!-- Cover the following points:
-    - Explain template-driven forms in Angular
-    - Explain reactive forms in Angular
-    - Discuss the pros and cons on the different approaches
-    - Explain how to test Angular apps
--->
+- Explain template-driven forms in Angular
+- Explain reactive forms in Angular
+- Discuss the pros and cons on the different approaches
+- Explain how to test Angular apps
 
 Handling user input is the most crucial part of a web application. Angular provides two ways of handling forms: template-driven forms and reactive forms. Template-driven forms are the most common approach and are similar to AngularJS. Reactive forms are a newer approach and are more robust and scalable. The choice of form depends on the use case. Simple forms are easier to implement using template-driven forms while more complex forms are easier to implement using reactive forms. You should chooes a template form if everything can be done using the template. If you need more control over the form, you should choose a reactive form.
 
@@ -116,3 +114,12 @@ Form validation:
 Angular testing utilities are exported with the `@angular/core/testing` package. The TestBed is the most important of the Angular testing utilities. The TestBed is the first and most important of the Angular testing utilities. The TestBed creates a dynamically-constructed Angular test module that emulates an Angular @NgModule. The TestBed.configureTestingModule() method takes a metadata object that can have most of the properties of an @NgModule. The TestBed.configureTestingModule() method returns an instance of the TestBed class, which has methods for creating components and services from the classes in the test module. The TestBed.createComponent() method creates an instance of the component that is associated with the component class. The TestBed.createComponent() method returns a ComponentFixture, which is a handle on the component and provides access to the component instance itself and to the DebugElement, which is a handle on the component's DOM element. The TestBed.createComponent() method also triggers change detection.
 
 See more in [app.component.spec.ts](./src/app/app.component.spec.ts)
+
+## Ci testing with Karma and Jasmine
+You can test in the CI ei. Github Actions. This is done by using Karma and Jasmine. Karma is a test runner for JavaScript that runs on Node.js. 
+
+Karma is used to run tests and Jasmine is used to write the tests. Karma is configured in the karma.conf.js file. 
+
+on github it looks like this when test are runned: on a pull request ![Karma test CI](KarmaTest.png) and a coverage report is also made: ![Coverage](CoverageReport.png)
+
+see the github actions file [here](./../.github/workflows/TestAndPushResults.yml)

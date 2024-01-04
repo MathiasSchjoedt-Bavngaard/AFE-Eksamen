@@ -74,6 +74,13 @@ export class FooterComponent implements OnInit {
       }
     }
   }
+  public openPwa(string = 'ANDROID'): void {
+    this.modalPwaPlatform = string;
+  }
+
+  public openVersion(): void {
+    this.modalVersion = true;
+  }
 
   public addToHomeScreen(): void {
     this.modalPwaEvent.prompt();

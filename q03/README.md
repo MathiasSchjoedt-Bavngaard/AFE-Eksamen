@@ -1,16 +1,14 @@
-# Q03
+# Q03 Routing and SSR
 
 <!-- References to code will be made in markdown by using: See more in line XX in [name of snippet]("PATH_TO_FILE") -->
 
-## Introduction - What is it about / what will you talk about
+**Questions:**
 
-<!-- Cover the following points:
-    - Explain how routing works in Angular 
-    - Explain module routing and lazy-loading
-    - Explain how to get route information in the navigated to component
-    - Explain how to protect routes with guards
-    - Explain why and how to use Server-Side Rendering (SSR)
--->
+- Explain how routing works in Angular
+- Explain module routing and lazy-loading
+- Explain how to get route information in the navigated to component
+- Explain how to protect routes with guards
+- Explain why and how to use Server-Side Rendering (SSR)
 
 ## Routing and module routing
 

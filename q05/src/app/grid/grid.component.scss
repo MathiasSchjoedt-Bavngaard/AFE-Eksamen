@@ -1,5 +1,12 @@
 .theme-grid {
   display: grid;
+  @media (max-width: 400px) {
+    grid-template:
+      "a"
+      "aa"
+      "b"
+      "bb";
+  }
   grid-template:
     "a aa"
     "b bb";
