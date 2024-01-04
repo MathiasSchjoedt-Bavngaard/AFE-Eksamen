@@ -14,7 +14,6 @@ function App() {
     <div>
        <h2>React GraphQL</h2>
        <Classes onNameSelected={onNameSelected} />
-       <p>{selectedName}</p>
        <div>
         {selectedName && <Spells classIndex={selectedName}/>}
        </div>
