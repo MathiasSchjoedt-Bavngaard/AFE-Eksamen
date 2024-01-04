@@ -120,4 +120,4 @@ With GraphQL we only get exactly what we ask for and nothing more. This means th
 Apollo Client is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.
 
 ### trying to use Client components in Server Only 
-![Server Only with client](image.png)
+![Server Only with client](images/image.png)
