@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container'>
        <h2>React GraphQL</h2>
        <Classes onNameSelected={onNameSelected} />
        <div>
