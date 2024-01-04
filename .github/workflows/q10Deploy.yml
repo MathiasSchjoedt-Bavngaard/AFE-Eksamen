@@ -110,14 +110,8 @@ jobs:
           target-folder: ${{ matrix.path }}/pr-${{ github.event.number }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: comment link
-        uses: actions/github-script@v4
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `Deployed to https://ninjaneer127.github.io/AFE-Eksamen/${{ matrix.path }}/pr-${{ github.event.number }} ` 
-            }) 
+          message: |
+            Deployed to https://ninjaneer127.github.io/AFE-Eksamen/${{ matrix.path }}/pr-${{ github.event.number }} 
