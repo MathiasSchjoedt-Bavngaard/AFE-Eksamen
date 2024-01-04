@@ -73,7 +73,7 @@ This uses the Service Worker Update from angular to update the version of the ap
 
 We then make a popup dialog as seen here:
 ![update](images/update.png)
-The implemenation of the dialog can be seen in [template lines 11-22](./src/app/footer/footer.component.html).  
+The implemenation of the dialog can be seen in [template lines 42-49](./src/app/footer/footer.component.html).  
 
 ### Different Devices
 
@@ -83,7 +83,7 @@ When we load the Update Module, we check for the **platform** type in the `loadM
 
 We also do this in the template, where we look at the `modalPwaPlatform` field to differentiate between different "divs".
 
-See [template lines 24-50](./src/app/footer/footer.component.html).  
+See [template lines 52-70](./src/app/footer/footer.component.html).  
 
 ### Additional information about Service Workers
 
