@@ -70,8 +70,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        path: [q09]
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/q09')
+        path: [q09/reactgraphql]
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/q09/reactgraphql')
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -105,7 +105,7 @@ jobs:
         with:
           branch: Realease
           folder: ${{ matrix.path }}/build
-          target-folder: ${{ matrix.path }}/brach-${{ github.ref }}
+          target-folder:  temp/${{ matrix.path }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
   deploy_pr:
@@ -147,11 +147,11 @@ jobs:
         with:
           branch: Realease
           folder: ${{ matrix.path }}/build
-          target-folder: ${{ matrix.path }}/pr-${{ github.event.number }}
+          target-folder: pr/${{ matrix.path }}/pr-${{ github.event.number }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            Deployed to https://ninjaneer127.github.io/AFE-Eksamen/${{ matrix.path }}/pr-${{ github.event.number }} 
+            Deployed to https://ninjaneer127.github.io/AFE-Eksamen/pr/${{ matrix.path }}/pr-${{ github.event.number }} 
