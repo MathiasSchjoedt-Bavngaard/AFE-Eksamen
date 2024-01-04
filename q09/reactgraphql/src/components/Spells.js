@@ -5,13 +5,11 @@ const query = gql`
     class(index: $index) {
       spells {
         index
-        attack_type
         casting_time
         components
         concentration
         desc
         duration
-        higher_level
         level
         material
         name
@@ -47,11 +45,9 @@ export default function Spells({ classIndex }) {
           <p>Material: {spell.material}</p>
           <p>Casting Time: {spell.casting_time}</p>
           <p>Duration: {spell.duration}</p>
-          <p>Concentration: {spell.concentration}</p>
-          <p>Ritual: {spell.ritual}</p>
-          <p>Desc: {spell.desc}</p>
-          <p>Higher Level: {spell.higher_level}</p>
-          <p>Attack Type: {spell.attack_type}</p>
+          <p>Concentration: {spell.concentration ? 'true' : 'false'}</p> 
+          <p>Ritual: {spell.ritual ? 'true' : 'false'}</p>
+          <p>Desc: {spell.desc}</p> 
         </div>
       ))}
     </>

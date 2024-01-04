@@ -217,3 +217,15 @@ The `cache: 'no-store'` option allows us to see the suspense fallback that is us
 ![Server Only with client](images/image.png)
 
 ## GraphQL in React
+
+GraphQL differs in React compared to Next.js in the sense that you don't have a server component. You only have client components.
+
+The approach is still the same. We create a new apollo client and use the provider as a wrapper for the app. See more in line 21 in [index.js](./reactgraphql/src/index.js)
+
+Then we create some client components that use the apollo client. See more in line 16 & 18 in [](./reactgraphql/src/App.js).
+
+The functionality of the React app is quite simple. It has a dropdown menu that gets all the different classes in Dungeons and Dragons. When you select a class it will show the spells that the class can use. The dropdown menu can be seen in lines 16-22 in [App.js](./reactgraphql/src/components/Classes.js)
+
+Then the selected class is used in the [Spells component](./reactgraphql/src/components/Spells.js).
+
+The queries are still structured the same way as they were in Next.js.
