@@ -38,7 +38,8 @@ export default function ClientComponent() {
     }>
       Data from client:
       <br />
-      {data.class.name} <br />
+      {data.class.name} 
+      <br />
       Counting Seconds as Client:  {counter}
     </div>
   );

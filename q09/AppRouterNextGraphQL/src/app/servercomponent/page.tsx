@@ -1,10 +1,9 @@
 "server-only"
 import { gql } from "@apollo/client";
 import { getClient } from "../../../lib/apolloClientServer";
-import styles from './Skills.module.css'; // Import the CSS module
+import styles from './Skills.module.css';
 // import { useEffect, useState } from "react";
 
-// Skill type
 export type Skill = {
   index: string;
   name: string;
@@ -38,9 +37,20 @@ export default async function Page() {
   // }, []);
   const client = getClient();
 
-  const { data } = await client.query({ query });
+  const { data } = await client.query({ query ,     
+    context: {
+      fetchOptions: {
+        cache: 'no-store',
+      },
+  },});
 
-  const { data: skills } = await client.query({ query: skillsQuerry });
+  const { data: skills } = await client.query({ query: skillsQuerry,
+    context: {
+      fetchOptions: {
+        cache: 'no-store',
+      },
+    },
+  });
 
   return (
     <main>
