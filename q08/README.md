@@ -89,9 +89,46 @@ Google wants to give the user the best experience.
 ![Alt text](image-3.png)
 
 ## Loading 
-how long does it take to load the page. not the
+how long does it take to load the page. Here we look at the Largest Contentful Paint (LCP) .
+This is the time it takes to load the largest element on the page. 
+
+## Interactivity
+How long does it take for the page to be interactive. Here we look at the First Input Delay (FID).
+This is the time it takes for the page to be interactive meaning the time it takes for the page to respond to the first user interaction. like a click or a scroll. 
+
+## Visual stability
+How stable is the page. Here we look at the Cumulative Layout Shift (CLS).
+This is the amount of unexpected layout shift of visual page content. This is when the page moves around. like when you are about to click a button and then a ad pops up and you click the ad instead. 
+
+When CSS is applyet late fx. Then the page will load and then the CSS will be applied. This will make the page jump around. This is not good for the user experience. 
 
 # Next.js
 
 
+Next.js is an open-source web development framework for React developed by Vercel. It enables serverside rendering and static generation of websites. It works well with SEO and is very fast because of the serverside rendering. It is easy to deploy the app to Vercel.
+
 ## Next.js and SEO 
+Next focuses on performance by minimizing the amount of code sent to the client. It also has built in support for code splitting and prefetching. This means that only the code needed for the current page is loaded. Shared code goes in separate bundles to avoid loading the same code multiple times. After the initial load, Next starts to prefetch code for other pages in the background.
+
+and this by using 
+- **Compilation** happens during development and as a part of the build step.
+
+- **Minifying** is the process of removing unnecessary characters from the code like whitespace, comments, indents and line breaks. This reduces the size of the code and improves the application's performance.
+
+- **Bundling** is the process of combining multiple files into optimized bundles. This reduces the number of requests needed to load the application.
+
+
+ ### Static generation
+Static generation is the default rendering method in Next. Pages that do not need to fetch external data will automatically be statically generated at build time. It **generates HTML for each page at build time**. The HTML is then reused on each request. This is the fastest method because the HTML is already generated and ready to be served. It is also the best method for SEO because the HTML is already generated and can be indexed by search engines.
+
+[getStaticProps](../q07/nextjs-blog/pages/posts/[id].js) can be used to fetch external data at build time and send it to the page as props. This is useful for pages that need to fetch external data but do not need to fetch data at request time.
+
+Static gemeration is the best method for SEO because the HTML is already generated and can be indexed by search engines. But it is not always possible to use static generation. if Updated data is needed.
+
+### Server-side rendering
+As Next.js is serverside Rendered it performs very well on SEO because the content is already rendered when the page is loaded. For crawlers this makes the page easy to read. And the content is already there. However this does give a slower first load time. and a slower TTFB. ( Time To First Byte ) 
+
+
+### Client-side rendering 
+
+Client-side rendering **generates HTML on the client**.  This gives fast TTBF and fast first load time. However this is not good for SEO because the content is not rendered when the page is loaded. This means that the crawlers will have a hard time reading the page. 
