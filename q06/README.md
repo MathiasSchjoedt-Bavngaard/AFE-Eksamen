@@ -73,7 +73,7 @@ This uses the Service Worker Update from angular to update the version of the ap
 
 We then make a popup dialog as seen here:
 ![update](images/update.png)
-The implemenation of the dialog can be seen in [template lines 11-22](./src/app/footer/footer.component.html).  
+The implemenation of the dialog can be seen in [template lines 42-49](./src/app/footer/footer.component.html).  
 
 ### Different Devices
 
@@ -83,10 +83,19 @@ When we load the Update Module, we check for the **platform** type in the `loadM
 
 We also do this in the template, where we look at the `modalPwaPlatform` field to differentiate between different "divs".
 
-See [template lines 24-50](./src/app/footer/footer.component.html).  
+See [template lines 52-70](./src/app/footer/footer.component.html).  
 
 ### Additional information about Service Workers
 
 A service worker is a web worker that implements a programmable network proxy that can respond to web/HTTP requests of the main document. It is able to check the availability of a remote server and to cache content when that server is available, and serve that content later to the document. Service workers, like any other web workers, work separately from the main document context. Service workers can handle push notifications and synchronize data in the background, cache or retrieve resource requests, intercept network requests and receive centralized updates independently of the document that registered them, even when that document is not loaded.
 
-Service workers go through a three-step lifecycle of Registration, Installation and Activation. Registration involves telling the browser the location of the service worker in preparation for installation. Installation occurs when there is no service worker installed in the browser for the web app, or if there is an update to the service worker. Activation occurs when all of the PWA's pages are closed, so that there is no conflict between the previous version and the updated one. The lifecycle also helps maintain consistency when switching among versions of service worker since only a single service worker can be active for a domain.
+Service workers go through a three-step lifecycle:
+ - Registration
+ - Installation
+ - Activation. 
+ 
+ Registration involves telling the browser the location of the service worker in preparation for installation. 
+ 
+ Installation occurs when there is no service worker installed in the browser for the web app, or if there is an update to the service worker.
+ 
+  Activation occurs when all of the PWA's pages are closed, so that there is no conflict between the previous version and the updated one. The lifecycle also helps maintain consistency when switching among versions of service worker since only a single service worker can be active for a domain.
