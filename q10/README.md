@@ -16,7 +16,7 @@ useful when developing:
 
 ## What is a native web component
 
-A native web component is a component that can be used in any web application across frameworks (and without frameworks). It uses custom elements, shadow DOM and HTML templates.
+A native web component is a component that can be used in any web application across frameworks (and without frameworks). It consists of a custom element, and can use the shadow DOM and HTML templates.
 
 ### Custom elements
 
@@ -28,4 +28,4 @@ Shadow DOM is a way to encapsulate the DOM and CSS of a component. It is defined
 
 ### HTML templates
 
-HTML templates are a way to define HTML that is not rendered. It is defined using the `<template>` tag. 
+HTML templates are a way to define HTML that is not rendered using the `<template>` tag. The `<slot>` tag can be used to make placeholders for content that is passed to the component.

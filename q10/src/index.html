@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="./afe-photo-carousel.js"></script>
     <link rel="stylesheet" href="./afe-photo-carousel.css" />
+    <script src="./component-with-template.js"></script>
     <title>AFE lab WebComponents 1</title>
   </head>
   <body>
@@ -17,5 +18,14 @@
     ./images/nKBgeLOr.jpg,./images/yVjJZ1Yr.jpg"
     >
     </afe-photo-carousel>
+
+    <component-with-template color="red">
+      <span slot="whatToPutInSlot">STUFF</span>
+    </component-with-template>
+
+    <component-with-template>
+      <span slot="whatToPutInSlot">OTHER STUFF</span>
+    </component-with-template>
+
   </body>
 </html>
