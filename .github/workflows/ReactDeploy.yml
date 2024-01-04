@@ -113,7 +113,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        path: [q09]
+        path: [q09/reactgraphql]
     if: github.event_name == 'pull_request'
     steps:
       - name: Checkout
