@@ -116,9 +116,10 @@ Angular testing utilities are exported with the `@angular/core/testing` package.
 See more in [app.component.spec.ts](./src/app/app.component.spec.ts)
 
 ## Ci testing with Karma and Jasmine
-You can test in the CI ei. Github Actions. This is done by using Karma and Jasmine. Karma is a test runner for JavaScript that runs on Node.js. 
 
-Karma is used to run tests and Jasmine is used to write the tests. Karma is configured in the karma.conf.js file. 
+You can test in the CI e.g. Github Actions. This is done by using Karma and Jasmine. Karma is a test runner for JavaScript that runs on Node.js.
+
+Karma is used to run tests and Jasmine is used to write the tests. Karma is configured in the [karma.conf.js file](./karma.conf.js).
 
 on github it looks like this when test are runned: on a pull request ![Karma test CI](KarmaTest.png) and a coverage report is also made: ![Coverage](CoverageReport.png)
 

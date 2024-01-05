@@ -22,8 +22,8 @@
       id="firstName"
       required
       pattern="^[a-zA-ZÀ-ÖØ-öø'-]{2,}"
-      [(ngModel)]="model.firstName"
       name="firstName"
+      ngModel
       #firstName="ngModel"
     />
 
@@ -37,8 +37,8 @@
       type="text"
       id="lastName"
       pattern="[a-zA-ZÀ-ÖØ-öø'-]{2,}"
-      [(ngModel)]="model.lastName"
       name="lastName"
+      ngModel
       #lastName="ngModel"
     />
 
@@ -53,8 +53,8 @@
       id="email"
       required
       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-      [(ngModel)]="model.email"
       name="email"
+      ngModel
       #email="ngModel"
     />
 
@@ -69,8 +69,8 @@
       id="phone"
       required
       pattern="[0-9]{8}"
-      [(ngModel)]="model.phone"
       name="phone"
+      ngModel
       #phone="ngModel"
     />
 
@@ -88,7 +88,6 @@
     >
   </div>
 
-
   <!-- WITHOUT CLASSES -->
   <div hidden>
     <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
@@ -98,8 +97,8 @@
         id="firstName"
         required
         pattern="^[a-zA-ZÀ-ÖØ-öø'-]{2,}"
-        [(ngModel)]="model.firstName"
         name="firstName"
+        ngModel
         #firstName="ngModel"
       />
 
@@ -108,8 +107,8 @@
         type="text"
         id="lastName"
         pattern="[a-zA-ZÀ-ÖØ-öø'-]{2,}"
-        [(ngModel)]="model.lastName"
         name="lastName"
+        ngModel
         #lastName="ngModel"
       />
 
@@ -119,8 +118,8 @@
         id="email"
         required
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-        [(ngModel)]="model.email"
         name="email"
+        ngModel
         #email="ngModel"
       />
 
@@ -130,8 +129,8 @@
         id="phone"
         required
         pattern="[0-9]{8}"
-        [(ngModel)]="model.phone"
         name="phone"
+        ngModel
         #phone="ngModel"
       />
 
