@@ -20,7 +20,10 @@
   <button [ngClass]="'googly-button'" (click)="logCount(count)">Log current count</button>
   
   <ul>
-    <li *ngFor="let message of getLogs()">Time: {{ message.date | date:'hh:mm:ss' }} | Count: <strong>{{message.message}}</strong></li>
+    <li *ngFor="let message of getLogs()">
+      Time: {{ message.date | date:'hh:mm:ss' }} | 
+      Count: <strong>{{message.message}}</strong>
+    </li>
   </ul>
 
   <app-display-count [count]="count"></app-display-count>

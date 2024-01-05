@@ -12,11 +12,8 @@ export interface Card {
   providedIn: 'root',
 })
 export class CardService {
-  http: HttpClient;
 
-  constructor(http: HttpClient) {
-    this.http = http;
-  }
+  constructor(private http: HttpClient) {}
 
   getCards(): Observable<Card[]> {
     return this.http
