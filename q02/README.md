@@ -98,7 +98,7 @@ See more in line 16 in [Card service injection](./src/app/app.component.ts)
 
 The HttpClient is used in combination with RxJS operators to filter and transform the data received from the server. It is initiated with `subscribe()` or the `async` pipe.
 
-See more in line 4 in [App.component.html](./src/app/app.component.html)
+See more in line 6 in [App.component.html](./src/app/app.component.html)
 
 ### Interceptors
 
@@ -106,7 +106,7 @@ When making http request to a server it is common to add headers to the request.
 
 You can also add other stuff to the request such as meta data or other headers.
 
-See more in line 14 in [Interceptor](./src/app/request-logger.interceptor.ts)
+See more in line 14 in [Interceptor](./src/app/request-logger.interceptor.ts) and line 13 in [App.module.ts](./src/app/app.module.ts)
 
 ### Error handling
 
