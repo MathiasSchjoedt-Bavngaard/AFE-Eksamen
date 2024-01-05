@@ -16,8 +16,7 @@ Building a GraphQL api can be more intensive than building a REST api. If your p
 
 ![GraphQL api](./images/GraphQL.png)
 
-Your GraphQL server uses a schema to describe the shape of your data graph. The schema specifies exactly which queries and mutations are
-available for clients to execute against your data graph. The schema is made with the GraphQL Schema Definition Language (SDL). The schema is the contract between the client and the server. The client can only ask for what is defined in the schema.
+Your GraphQL server uses a schema to describe the shape of your data graph. The schema specifies exactly which queries and mutations are available for clients to execute against your data graph. The schema is made with the GraphQL Schema Definition Language (SDL). The schema is the contract between the client and the server. The client can only ask for what is defined in the schema.
 
 Example of a schema:
 
@@ -131,7 +130,7 @@ When using the apollo client for a client component in Next.js we need do to the
 
 Step 3 uses the apollo client by using the `UseSuspenseQuery` hook.
 
-Additionally we import and use the gql tag to parse the query string into a query document. This can be seen in line 8 in [Client component](./AppRouterNextGraphQL/src/app/clientcomponent/page.tsx)
+Additionally we import and use the `gql` tag to parse the query string into a query document. This can be seen in line 8 in [Client component](./AppRouterNextGraphQL/src/app/clientcomponent/page.tsx)
 
 The client component is then instantiated on line 9 in the [Home component](./AppRouterNextGraphQL/src/app/page.tsx)
 
@@ -208,7 +207,7 @@ Which simply creates a new apollo client.
 
 The server component gets a name (barbarian) and skills  
 
-We can specify the `"use server"` and prevent client components from being used however this is not necessary.
+We can specify the `"server only"` and prevent client components from being used however this is not necessary.
 
 The `cache: 'no-store'` option allows us to see the suspense fallback that is used in the `Home` component. See more in line 10 in [home component](./AppRouterNextGraphQL/src/app/page.tsx)
 
@@ -222,7 +221,7 @@ GraphQL differs in React compared to Next.js in the sense that you don't have a 
 
 The approach is still the same. We create a new apollo client and use the provider as a wrapper for the app. See more in line 21 in [index.js](./reactgraphql/src/index.js)
 
-Then we create some client components that use the apollo client. See more in line 16 & 18 in [](./reactgraphql/src/App.js).
+Then we create some client components that use the apollo client. See more in [line 16 & 18](./reactgraphql/src/App.js).
 
 The functionality of the React app is quite simple. It has a dropdown menu that gets all the different classes in Dungeons and Dragons. When you select a class it will show the spells that the class can use. The dropdown menu can be seen in lines 16-22 in [App.js](./reactgraphql/src/components/Classes.js)
 
