@@ -22,6 +22,13 @@ A native web component is a component that can be used in any web application ac
 
 Custom elements are a way to create your own HTML elements. They are defined using the `customElements.define()` method. The method takes two arguments: the name of the element and the class that defines the element.
 
+A custom component is built as a class that extends HTMLElement.
+
+Methods:
+
+- **Constructor** happens once, when the component is instantiated. Is not connected to the DOM. 
+- **ConnectedCallback** happens each time the custom element is appended into a document-connected element
+
 ### [Shadow DOM](./src/component-with-template.js)
 
 Shadow DOM is a way to encapsulate the DOM and CSS of a component. It is defined using the `attachShadow()` method. The method takes one argument: the mode of the shadow DOM. The mode can be `open` or `closed`. If the mode is `open` the shadow DOM can be accessed from outside the component. If the mode is `closed` the shadow DOM can only be accessed from inside the component. The shadow DOM is rendered separately from the main DOM. This means that when a web component uses the shadow DOM the component does not collide with other elements on the page (name and styling).
@@ -75,6 +82,8 @@ setTimeout(() => {
 
 ### Pros
 
+- Future proof
+- Backwards compatible
 - Builds on native browser functionality
 - Can be used across frameworks
 - Can be used without a framework
@@ -86,3 +95,5 @@ setTimeout(() => {
 - Not a very big community around it yet
 - Somewhat complex to build
 - Very manual and low level
+- Need to implement event-bus to handle events
+- No standard for server side rendering
