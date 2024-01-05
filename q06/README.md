@@ -52,12 +52,11 @@ We have included the installation and online status inside the Footer: ![Connect
 
 ### Make it installable
 
-Add the `@angular/pwd` library to set up the Angular service worker.
-we make changes in the following files:
+Run `ng add @angular/pwd` to add the library to set up the Angular service worker. This updates the following files:
 
-- package.json: The `@angular/service-worker` library was added.
-- src/app/app.module.ts: The service worker configuration was added. See line 33-39 for ![Service worker registration](./src/app/app.module.ts)
-- src/index.html: Manifest file configuration and theme color was added.
+- package.json: The `@angular/service-worker` library was added in [line 25](./package.json).
+- src/app/app.module.ts: The service worker configuration was added. See line 33-39 for [Service worker registration](./src/app/app.module.ts)
+- src/index.html: Manifest file configuration and theme color was added [line 18](./src/index.html)
 
 ### Check online status
 
@@ -99,3 +98,5 @@ Service workers go through a three-step lifecycle:
  Installation occurs when there is no service worker installed in the browser for the web app, or if there is an update to the service worker.
  
   Activation occurs when all of the PWA's pages are closed, so that there is no conflict between the previous version and the updated one. The lifecycle also helps maintain consistency when switching among versions of service worker since only a single service worker can be active for a domain.
+
+Service worker in action - inspector -> application -> service workers
