@@ -79,3 +79,8 @@ Pre-rendering allows you to run a client side application at build time to captu
 ### Rehydration
 
 Rehydration is the process of "booting up" JavaScript views on the client such that they use the server side generated HTML's DOM tree as well as the data.
+
+### How to
+
+Add the ssr package `ng add @angular/ssr`
+Run `npm run dev:ssr` to start the app with server side rendering
