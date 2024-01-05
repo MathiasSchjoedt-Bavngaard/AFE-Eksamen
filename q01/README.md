@@ -58,7 +58,7 @@ Code that is not directly interacting with the view should be placed in a servic
 
 To create a service you have to use the `@Injectable` decorator. This decorator tells Angular that the class can be used with dependency injection. The `@Injectable` decorator is not strictly required if the service has no dependencies and does not need to be injected anywhere, but it is considered good practice to always use it. The `@Injectable` has a providedIn property, which is used to specify the provider of the service. The providedIn property can be set to root, which means that the service is provided in the root injector. This means that the service is available everywhere in the application. The providedIn property can also be set to a specific module, which means that the service is only available in that module.
 
-See more in line 8 in [Logger service](./src/app/logger.service.ts)
+See more in line 8 in [Logger service](./src/app/logger.service.ts) which is injected in line 17 in [Example component](./src/app/example-component/example-component.component.ts)
 
 DI requires that the service or value or function is asked for by the consumer. The consumer is the component that needs the service. The consumer must ask for the service in the constructor.
 
