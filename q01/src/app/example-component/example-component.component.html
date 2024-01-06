@@ -4,8 +4,8 @@
   <p>Current count: {{ count }}</p>
   
   <div [ngClass]="'button-container'">
-    <button [ngClass]="'googly-button'" (click)="increment()">Increment</button>
-    <button [ngClass]="'googly-button'" (click)="decrement()">Decrement</button>
+    <button [ngClass]="{'googly-button':count < 5}" (click)="increment()">Increment</button>
+    <button [ngClass]="{'googly-button':count > -1}" (click)="decrement()">Decrement</button>
     <button [ngClass]="'googly-button'" (click)="reset()">Reset Counter</button>
   </div>
 
