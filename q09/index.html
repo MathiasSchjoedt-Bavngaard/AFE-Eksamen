@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Exploring GraphQL in React and Next.js">
+    <meta name="description"
+        content="Discover the implementation and differences of GraphQL in React and Next.js. Learn through examples, discussions on REST vs GraphQL, and deep dive into GraphQL APIs with React and Next.js.">
+    <meta name="keywords" content="GraphQL, React, Next.js, API, Web Development, JavaScript, Query Language">
+    <meta name="author" content="Ninjaneer127, MathiasSchjoedt-Bavngaard, Sirety">
+    <title>GraphQL in React and Next.js</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>GraphQL in React and Next.js</h1>
+        <p>Welcome to a comprehensive exploration of GraphQL in the world of React and Next.js. Understand the
+            principles, compare with REST, and see practical examples.</p>
+
+        <div class="content">
+            <section class="section">
+                <h2>What is GraphQL?</h2>
+                <p>GraphQL is a query language for APIs, offering a complete and understandable description of the data
+                    in your API, with the power for clients to ask exactly what they need.</p>
+            </section>
+
+            <section class="section">
+                <h2>GraphQL in Next.js</h2>
+                <p>In Next.js, GraphQL can be integrated using Apollo Client for state management, and server components
+                    for server-side rendering (SSR), providing a more efficient data fetching and rendering process.</p>
+            </section>
+
+            <section class="section">
+                <h2>GraphQL in React</h2>
+                <p>React applications can leverage GraphQL for efficient client-side data fetching and management,
+                    enhancing the interactive user experience with dynamic content.</p>
+            </section>
+        </div>
+
+
+        <div class="navigation">
+            <a href="./reactgraphql/" class="btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" style="height: 30px; vertical-align: middle; margin-right: 8px;">
+                React GraphQL Example
+            </a>
+            <a href="https://q09-graph-ql.vercel.app/" class="btn" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js Logo" style="height: 30px; vertical-align: middle; margin-right: 8px;">
+                 GraphQL Example
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

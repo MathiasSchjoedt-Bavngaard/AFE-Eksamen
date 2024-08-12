@@ -1,0 +1,126 @@
+<style>
+ .card {
+        background: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+      }
+      .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .card a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: larger;
+      }
+      /* spans inside a card will have a padding of 10 px */
+      .card span {
+        padding: 10px;
+      }
+      .card a:hover {
+        text-decoration: underline;
+      }
+</style>
+<h1 id="q08-seo">Q08 SEO</h1>
+<ul>
+<li>Explain what Search engine optimization is. Why and when it is important.</li>
+<li>What affects SEO ranking?</li>
+<li>What is Core Web Vitals? And why are they important?</li>
+<li>Give an overview of Next.js and explain how to improve SEO in a Next Web app.</li>
+</ul>
+<h1 id="what-is-search-egnine-optimization">What is search egnine optimization</h1>
+<p>its a stragegy to make sure your website is higher i google search </p>
+<h2 id="ranking">Ranking</h2>
+<p>The placement of your website compared to your competetor. The higher you are on searches the more your website will be visited. </p>
+<h2 id="traffic">Traffic</h2>
+<p>When we look how the seo performs we look at the trafic. How many people visit your website. And from what search terms.
+However not all trafic is good. We need the trafic that is looking for our product. So there for its importent to make content that is relevant to the search. and not just make popular content. 
+The only exception is if you make money on ads. Then you want as much trafic as possible. </p>
+<h1 id="what-affects-seo-ranking-">What affects SEO ranking?</h1>
+<h2 id="sitemap">Sitemap</h2>
+<p>When the webcrawlers want to visit sites. They can crawl through links . The primary purpose of a sitemap is to list URLs to ensure that search engines can find and crawl them. Sitemaps usually include basic information such as the URL, last modification date, change frequency, and priority of the pages on your site.</p>
+<p>For our github-pages we made a <a href="./../sitemap.xml">sitemap </a> here all the urls are listed. </p>
+<p>We can use this to create a visual sitemap or use in in google console to make sure google can find all the pages. and faster <img src="image-2.png" alt="Alt text"></p>
+<h2 id="metaheader">Metaheader</h2>
+<p>In the header of a HTML page there can ber stored some meta data. 
+like in this <a href="./../q03/src/index.html">q03 index</a> 
+The meta data tag have 4 properties: description, keywords, author, and viewport.  </p>
+<pre><code class="lang-html">&lt;meta <span class="hljs-built_in">name</span>=<span class="hljs-string">"description"</span> content=<span class="hljs-string">"This is the description of my website"</span>&gt;
+&lt;meta <span class="hljs-built_in">name</span>=<span class="hljs-string">"keywords"</span> content=<span class="hljs-string">"keyword1, keyword2, keyword3, keyword4, etc."</span>&gt;
+
+&lt;meta <span class="hljs-built_in">name</span>=<span class="hljs-string">"author"</span> content=<span class="hljs-string">"Ninjaneer127, MathiasSchjoedt-Bavngaard, Sirety"</span>&gt;
+
+&lt;meta <span class="hljs-built_in">name</span>=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;
+</code></pre>
+<p>The description is used to describe the website. This is used by the search engine to describe the website. and is also used to describe the website in the search results. (this is especially important becouse this could be the first thing a user sees about your website.) </p>
+<p><img src="image-1.png" alt="Alt text"></p>
+<p>read more here:
+<a href="https://www.w3schools.com/tags/tag_meta.asp">HTML &lt; meta &gt; tag</a></p>
+<h2 id="content">Content</h2>
+<p>So why are content important for the search engine?
+The search engine wants to give the user the best experience. Therefor it will try to give the user the best content. This is also scored by the users. If a user clicks on a link and then quickly leaves the page again, the search engine will see that the user did not find what he was looking for. This will then affect the ranking of the page. For those search terms.</p>
+<h2 id="links">Links</h2>
+<p>To make sure SE knows what category your website belongs to, it looks at the links of your webpage. 
+it will also use these klinks to &quot;crawl&quot; through a site. </p>
+<h3 id="internal">Internal</h3>
+<p>The internal links - the links on your page that links to your ownb site. These links are used to calculate usability and to se what pages are connected. </p>
+<h3 id="external">external</h3>
+<p>The External links are both outcoing and incomming., </p>
+<p>The outgoing links are the ones that you say your weebsite looks like. This way services like google can see what you want your website to look like
+The incommin links are other peoble that link to your website. Both the number of links affects you SEO &quot;score&quot; but also the correct type of links. Fx. if i own a potato buissness its good that pages that premote potatoes / vegstibles linkes to my site. Like a Health blog saying; &quot;this is a place you can get good potatoes for your salat&quot; is much better, than a page explaining how a atomic clock works and mentions a potato and then linking to you potato shop maybe just to link to the people who don&#39;t know what a potato is. 
+Now this link from the atomic power page is maybe not what your customers normaly look for. There for that link wont be as vlauable as the helth blog one. </p>
+<h2 id="performance">Performance</h2>
+<p>To get a good SEO score you need to have a good performance. This means how well your website performs. in terms of core web vitals. 
+The better your website performs the better your SEO score will be and higher ranking. </p>
+<h1 id="core-web-vitals">Core Web Vitals</h1>
+<h2 id="what-is-core-web-vitals-">What is Core Web Vitals?</h2>
+<p>Core Web Vitals are a set of metrics introduced by Google to measure the user experience of a web page. These metrics focus on loading performance, interactivity, and visual stability, which are crucial for delivering a smooth and engaging user experience. The three main Core Web Vitals are:</p>
+<ul>
+  <li><strong>Largest Contentful Paint (LCP):</strong> Measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading.</li>
+  <li><strong>First Input Delay (FID):</strong> Measures interactivity. Pages should have a FID of less than 100 milliseconds.</li>
+  <li><strong>Cumulative Layout Shift (CLS):</strong> Measures visual stability. Pages should maintain a CLS of less than 0.1.</li>
+</ul>
+<p>These metrics are important because they help ensure that a website is not only fast but also stable and responsive, providing a better overall experience for users.</p>
+
+<h1 id="next-js">Next.js</h1>
+<h2 id="next-js-and-seo">Next.js and SEO</h2>
+<p>Next.js is a popular React framework that enables developers to create server-side rendered and static web applications. One of the key benefits of using Next.js is its built-in support for improving SEO. Here are some ways Next.js helps enhance SEO:</p>
+<ul>
+  <li><strong>Server-Side Rendering (SSR):</strong> SSR ensures that the HTML is generated on the server for each request, making it easier for search engines to crawl and index the content.</li>
+  <li><strong>Static Site Generation (SSG):</strong> SSG generates static HTML pages at build time, which can be served quickly and efficiently, improving load times and SEO.</li>
+  <li><strong>API Routes:</strong> Next.js allows the creation of API endpoints, which can be used to fetch data and enhance the dynamic nature of a web application without sacrificing SEO.</li>
+  <li><strong>Meta Tags and Open Graph Tags:</strong> Next.js makes it easy to manage meta tags and Open Graph tags for better social media integration and SEO optimization.</li>
+</ul>
+
+<h2 id="good-seo-page">A good page with good SEO</h2>
+<p>A prime example of a website with excellent SEO practices is <a href="https://bavngaard.com/blog/">bavngaard.com</a>. This website demonstrates a strong understanding of SEO fundamentals and Core Web Vitals. Here's why bavngaard.com stands out:</p>
+<ul>
+  <li><strong>Well-Structured Content:</strong> The website features well-organized and informative content across its various sections, such as <a href="https://bavngaard.com/blog/relationsfaerdigheder">relation skills</a> and <a href="https://bavngaard.com/blog/traumer">trauma</a>, ensuring relevance and engagement for users.</li>
+  <li><strong>Efficient Use of Meta Tags:</strong> Each page is optimized with appropriate meta descriptions and keywords, enhancing visibility in search engine results.</li>
+  <li><strong>Fast Loading Times:</strong> By leveraging modern web technologies and best practices, the site maintains fast loading times, contributing to a better user experience and improved SEO performance.</li>
+  <li><strong>Mobile Optimization:</strong> The site is fully responsive, ensuring a seamless experience across all devices, which is crucial for both user satisfaction and search engine ranking.</li>
+  <li><strong>Comprehensive Sitemap:</strong> The <a href="https://bavngaard.com/sitemap.xml">sitemap</a> ensures that all pages are easily discoverable by search engines, facilitating better indexing and ranking.</li>
+</ul>
+<p>In summary, bavngaard.com exemplifies a well-optimized website that effectively utilizes SEO best practices to achieve high search engine rankings and provide a superior user experience. Whether you're looking for detailed information on therapy services, practical advice, or insightful blog posts, bavngaard.com is a valuable resource that delivers quality content and excellent performance.</p>
+
+<div class="card">
+  <a
+    href="https://psykologernesnetvaerk.dk/"
+    target="_blank"
+    >Need to find a therapist</a
+  ><span style="float: right">A page insurrance companies to find a psykologist to their clients </span>
+</div>
+<div class="card">
+  <a
+    href="https://psykologernesnetvaerk.dk/"
+    target="_blank"
+    >psykologernes Netværk</a
+  ><span style="float: right">Her kan forsikringer finde en psykolog til deres clienter</span>
+</div>

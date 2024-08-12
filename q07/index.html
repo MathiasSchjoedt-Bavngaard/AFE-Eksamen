@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Next.js Overview - Q07</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cards-container {
+            display: flex;
+
+            justify-content: space-between;
+
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #ffffff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card a {
+            height: 100%;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .card img {
+            max-width: 100%;
+
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Next.js Routers Overview</h1>
+        <div class="cards-container">
+
+
+            <div class="card">
+                <a href="https://nextjs-dashboard-black-seven.vercel.app/">
+                    <div
+                    style="
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                "
+                    >
+                        <img src="app-router.png" alt="App Router Implementation">
+                    </div>
+                </a>
+                <div>
+                    <a href="https://nextjs-dashboard-black-seven.vercel.app/">
+                        <div class="card-title">App Router Implementation in Next.js</div>
+                        <div class="card-description">Explore how the App router works in Next.js with a practical
+                            example hosted on Vercel.</div>
+
+                    </a>
+                </div>
+
+            </div>
+            <div class="card">
+                <a href="https://nextjs-blog-nine-iota-29.vercel.app/">
+                    <img src="page-router.png" alt="Page Router Implementation">
+                    <div class="card-title">Page Router Implementation in Next.js</div>
+                    <div class="card-description">Learn about the Page router in Next.js through an interactive example
+                        hosted on Vercel.</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
