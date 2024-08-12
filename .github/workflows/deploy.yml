@@ -4,17 +4,16 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'q01/**'
-      - 'q02/**'
-      - 'q03/**'
-      - 'q04/**'
-      - 'q05/**'
-      - 'q06/**'
+    # paths:
+    #   - 'q01/**'
+    #   - 'q02/**'
+    #   - 'q03/**'
+    #   - 'q04/**'
+    #   - 'q05/**'
+    #   - 'q06/**'
 
   workflow_dispatch:
 
-    
 permissions:
   contents: write
 
