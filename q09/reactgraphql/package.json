@@ -2,7 +2,7 @@
   "name": "reactgraphql",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mathiasschjoedt-bavngaard.github.io/AFE-Eksamen/q09/reactgraphql/",
+  "homepage": "https://ninjaneer127.github.io/AFE-Eksamen/q09/reactgraphql/",
   "dependencies": {
     "@apollo/client": "^3.8.8",
     "@emotion/react": "^11.11.3",

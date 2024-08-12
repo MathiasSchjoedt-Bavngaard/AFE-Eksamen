@@ -116,4 +116,4 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            Deployed to https://mathiasschjoedt-bavngaard.github.io/AFE-Eksamen/${{ matrix.path }}/pr-${{ github.event.number }} 
+            Deployed to https://ninjaneer127.github.io/AFE-Eksamen/${{ matrix.path }}/pr-${{ github.event.number }} 
