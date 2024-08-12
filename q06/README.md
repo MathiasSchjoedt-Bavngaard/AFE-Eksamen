@@ -13,7 +13,7 @@
 
 - **Progressive** - Works for every user, regardless of browser choice because it's built with progressive enhancement as a core tenet
 
-- **Responsive** - Fits any form factor: desktop, mobile, tablet, or whatever is next. See more responsive web design on: [q05](https://ninjaneer127.github.io/AFE-Eksamen/q05/)
+- **Responsive** - Fits any form factor: desktop, mobile, tablet, or whatever is next. See more responsive web design on: [q05](https://mathiasschjoedt-bavngaard.github.io/AFE-Eksamen/q05/)
 
 - **Connectivity** Independent - Enhanced with service workers to work offline or on
 low-quality networks. See [storage](#storage) for offline use
